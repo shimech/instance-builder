@@ -1,6 +1,8 @@
 # Instance-Builder - Instance builder library for Python inspired by Lombok
 
-![image](https://github.com/shimech/instance-builder/actions/workflows/test.yml/badge.svg)
+![Python Versions](https://img.shields.io/pypi/pyversions/instance-builder.svg)
+![PyPI version](https://badge.fury.io/py/instance-builder.svg)
+![CI](https://github.com/shimech/instance-builder/actions/workflows/test.yml/badge.svg)
 
 ## Installation
 
