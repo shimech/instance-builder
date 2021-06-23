@@ -10,11 +10,5 @@ def __get_requirements(filename: str) -> list[str]:
 
 
 setup(
-    packages=["instance-builder"],
     install_requires=__get_requirements("requirement.txt"),
-    keywords=[
-        "Instance Builder",
-        "Builder",
-        "Lombok"
-    ],
 )
