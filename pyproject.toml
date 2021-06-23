@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "instance-builder"
-version = "0.1.5"
+version = "0.1.8"
 description = "Instance builder library for Python inspired by Lombok"
 authors = ["Shuntaro Shimizu <ut.s.shimizu@gmail.com>"]
 license = "MIT"

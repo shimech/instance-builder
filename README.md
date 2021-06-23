@@ -12,6 +12,8 @@ pip install instance-builder
 
 ## Usage
 
+Builder
+
 ```python
 @builder("id", "name", "age", "email")
 class User:
@@ -22,6 +24,32 @@ class User:
         self.email = email
 
 user = User.Builder().id(0).name("Shuntaro Shimizu").age(99).email("ut.s.shimizu@gmail.com").build()
+```
+
+Getter
+
+```python
+@getter
+class User:
+    __id: int = 0
+    __name: str = "Shuntaro Shimizu"
+
+user = User()
+user.get_id()  # 0
+user.get_name()  # "Shuntaro Shimizu"
+```
+
+Setter
+
+```python
+@setter
+class User:
+    __id: int = 0
+    __name: str = "Shuntaro Shimizu"
+
+user = User()
+user.set_id(1)  # user._User__id == 1
+user.set_name("New Name")  # user._User__name == "New Name"
 ```
 
 © Copyright 2021 to Shuntaro Shimizu, under the MIT license
