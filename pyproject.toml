@@ -7,13 +7,13 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.9"
+
+[tool.poetry.dev-dependencies]
 autopep8 = "^1.5.7"
 twine = "^3.4.1"
 wheel = "^0.36.2"
 keyring = "^23.0.1"
 pytest = "^6.2.4"
-
-[tool.poetry.dev-dependencies]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
