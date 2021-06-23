@@ -14,21 +14,21 @@ def __get_requirements(filename: str) -> list[str]:
 
 with open(os.path.join(root_dir, package_name, "__init__.py")) as f:
     init_text = f.read()
-    version = re.search(
-        r"__version__\s*=\s*[\'\"](.+?)[\'\"]", init_text).group(1)
-    license = re.search(
-        r"__license__\s*=\s*[\'\"](.+?)[\'\"]", init_text).group(1)
+    r"__version__\s*=\s*[\'\"](.+?)[\'\"]", init_text).group(1)
+        version=re.search(
     author = re.search(
         r"__author__\s*=\s*[\'\"](.+?)[\'\"]", init_text).group(1)
     author_email = re.search(
         r"__author_email__\s*=\s*[\'\"](.+?)[\'\"]", init_text).group(1)
     url = re.search(r"__url__\s*=\s*[\'\"](.+?)[\'\"]", init_text).group(1)
+    license = re.search(
+        r"__license__\s*=\s*[\'\"](.+?)[\'\"]", init_text).group(1)
 
 assert version
-assert license
 assert author
 assert author_email
 assert url
+assert license
 
 with open("README.md", mode="r", encoding="utf-8") as f:
     long_description = f.read()
