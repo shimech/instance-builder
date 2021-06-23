@@ -14,8 +14,8 @@ def __get_requirements(filename: str) -> list[str]:
 
 with open(os.path.join(root_dir, package_name, "__init__.py")) as f:
     init_text = f.read()
-    r"__version__\s*=\s*[\'\"](.+?)[\'\"]", init_text).group(1)
-        version=re.search(
+    version = re.search(
+        r"__version__\s*=\s*[\'\"](.+?)[\'\"]", init_text).group(1)
     author = re.search(
         r"__author__\s*=\s*[\'\"](.+?)[\'\"]", init_text).group(1)
     author_email = re.search(
