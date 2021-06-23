@@ -1,5 +1,7 @@
 # Instance-Builder - Instance builder library for Python inspired by Lombok
 
+![image](https://github.com/shimech/instance-builder/actions/workflows/test.yml/badge.svg)
+
 ## Installation
 
 ```shell
@@ -19,3 +21,5 @@ class User:
 
 user = User.Builder().id(0).name("Shuntaro Shimizu").age(99).email("ut.s.shimizu@gmail.com").build()
 ```
+
+© Copyright 2021 to Shuntaro Shimizu, under the MIT license
