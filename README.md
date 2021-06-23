@@ -1,5 +1,11 @@
 # Instance-Builder - Instance builder library for Python inspired by Lombok
 
+## Installation
+
+```shell
+pip install instance-builder
+```
+
 ## Usage
 
 ```python
