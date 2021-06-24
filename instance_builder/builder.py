@@ -1,4 +1,7 @@
-from typing import Callable, Any
+from typing import Callable, TypeVar
+
+
+T = TypeVar("T")
 
 
 def builder(*attributes: list[str]) -> Callable[type, type]:
@@ -31,8 +34,8 @@ def builder(*attributes: list[str]) -> Callable[type, type]:
                     self.kwargs[attribute] = None
                     setattr(self, attribute, self.generate_setter(attribute))
 
-            def generate_setter(self, key: str) -> Callable[Any, "Builder"]:
-                def set_value(value: Any) -> "Builder":
+            def generate_setter(self, key: str) -> Callable[T, "Builder"]:
+                def set_value(value: T) -> "Builder":
                     self.kwargs[key] = value
                     return self
                 return set_value

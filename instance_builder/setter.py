@@ -1,10 +1,13 @@
-from typing import Callable, Any
+from typing import Callable, TypeVar
 from .lib import find_attributes
 
 
+T = TypeVar("T")
+
+
 def setter(Class: type) -> type:
-    def generate_setter(name: str) -> Callable[Class, Any]:
-        def set_value(self, value: Any) -> Any:
+    def generate_setter(name: str) -> Callable[T, None]:
+        def set_value(self, value: T) -> None:
             setattr(self, name, value)
         return set_value
 

@@ -1,10 +1,13 @@
-from typing import Callable, Any
+from typing import Callable, TypeVar
 from .lib import find_attributes
 
 
+T = TypeVar("T")
+
+
 def getter(Class: type) -> type:
-    def generate_getter(name: str) -> Callable[Class, Any]:
-        def get_value(self) -> Any:
+    def generate_getter(name: str) -> Callable[Class, T]:
+        def get_value(self) -> T:
             return getattr(self, name)
         return get_value
 
